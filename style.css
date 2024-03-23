@@ -1,0 +1,157 @@
+@import url("https://api.fontshare.com/v2/css?f[]=panchang@1&f[]=clash-display@700&display=swap");
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --min-font-size: 2rem; /* Minimum font size */
+    --max-font-size: 6rem; /* Maximum font size */
+  }
+
+html,body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    user-select: none;
+}
+
+
+
+#navbar{
+    position: absolute;
+    width: 450px;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    left: 5%;
+    top: 5%;
+
+
+}
+
+
+#navbar img{
+    height: 60px;
+}
+
+
+#navbar h5{
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Panchang', sans-serif;;
+}
+
+
+#main{
+    width: 100%;
+    height: 100%;
+    /* background-color: #AB8F97; */
+    background-color: #8fa8b3;
+    display: flex;
+}
+
+#part1{
+    height: 100%;
+    width: 26%;
+    /* background-color: red; */
+}
+
+#part2{
+    height: 100%;
+    width: 67%;
+    background-color: rgb(0, 110, 255);
+    background-image: url(https://images.unsplash.com/photo-1500336624523-d727130c3328?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#overlay-big-img{
+    width: 100%;
+    height: 100%;
+    background-color: #ad734c3e;
+}
+
+#part3{
+    height: 100%;
+    width: 7%;
+    /* background-color: rgb(0, 252, 105); */
+}
+
+#text-div{
+    /* height: 300px; */
+    width: 400px;
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    /* background-color: #000000; */
+    z-index: 5;
+    transform: translate(0,-50%);
+   
+}
+
+#text-div>h1{
+    /* font-size: 50px; */
+    /* font-size: 4rem; */
+
+    font-size: clamp(var(--min-font-size), 5vw, var(--max-font-size));
+    font-family: 'Panchang', sans-serif;
+    font-weight: 760;
+    color: white;
+    line-height:clamp(var(--min-font-size), 5vw, var(--max-font-size));;
+}
+
+#small-img-div{
+    height: 400px;
+    width: 300px;
+    /* background-color: rgb(255, 0, 162); */
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right:4%;
+    background-image: url(https://images.unsplash.com/photo-1506795660198-e95c77602129?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+
+}
+
+#overlay-small-img{
+    width: 100%;
+    height: 100%;
+    background-color: #ad734c68;
+}
+
+#vertical-text{
+    position: absolute;
+    transform: rotate(90deg);
+    right: -72%;
+    transform-origin: 0% 0%;
+    /* width: 100%; */
+    /* background-color: rebeccapurple; */
+}
+
+#vertical-text h1{
+    font-size: clamp(var(--min-font-size), 5vw, var(--max-font-size));
+    font-family: 'Clash Display', sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 800;
+    color: transparent;
+    letter-spacing: 8px;
+    animation: vertical-text 20s linear infinite;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+@keyframes vertical-text{
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); } /* Adjust direction of scroll */
+}
+/* @keyframes vertical-text{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } 
+} */
